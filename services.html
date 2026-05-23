@@ -3,272 +3,254 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | United Management</title>
-  <meta name="description" content="Explore United Management's full range of property management services — residential, commercial, tenant placement, maintenance, and more." />
+  <title>Services | United Management Holdings LLC</title>
+  <meta name="description" content="Commercial property management services from United Management Holdings LLC — tenant coordination, vendor management, lease administration, owner reporting, and more." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Services | United Management Holdings LLC" />
+  <meta property="og:description" content="Commercial property management services — tenant coordination, vendor management, lease administration, and owner reporting in Northern California." />
+  <meta property="og:url" content="https://www.unitedmanagementholdings.com/services.html" />
+  <meta property="og:site_name" content="United Management Holdings LLC" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Services | United Management Holdings LLC" />
+  <meta name="twitter:description" content="Commercial property management services — tenant coordination, vendor management, lease administration, and owner reporting in Northern California." />
+  <link rel="canonical" href="https://www.unitedmanagementholdings.com/services.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230B1F3A'/><text y='68' x='50' text-anchor='middle' font-size='42' font-weight='900' fill='white' font-family='Arial'>UMH</text><rect y='82' width='100' height='9' fill='%23B91C1C'/></svg>" />
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="navbar-brand">
-        <div class="navbar-logo-icon">UM</div>
-        <div class="navbar-brand-text">
-          <span class="navbar-brand-name">United Management</span>
-          <span class="navbar-brand-tagline">Property Management</span>
-        </div>
-      </a>
-      <ul class="navbar-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="navbar-cta"><a href="contact.html" class="btn btn-primary">Get a Free Quote</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="umh-logo">
+      <div class="umh-mark"><span>UMH</span></div>
+      <div class="umh-wordmark">
+        <span class="umh-name">United Management Holdings</span>
+        <span class="umh-sub">Commercial Property Management</span>
       </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="properties.html">Properties</a></li>
+      <li><a href="tenant-resources.html">Tenant Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Contact Management</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-eyebrow">What We Do</div>
+    <h1>Commercial Property Management Services</h1>
+    <p>Organized, practical, and responsive operational support for commercial real estate owners, tenants, and vendors.</p>
+  </div>
+</section>
+
+<!-- SERVICES DETAIL -->
+<section class="section">
+  <div class="container">
+
+    <div class="notice-box">
+      <p><strong>United Management Holdings LLC</strong> provides management and operational coordination services for commercial real estate assets. The services described below reflect the operational scope of the company's management activities. For questions about a specific property or engagement, please <a href="contact.html" style="color:var(--blue);font-weight:600;">contact management directly</a>.</p>
     </div>
-  </nav>
 
-  <!-- ===== PAGE HERO ===== -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="section-tag">Full-Service Management</span>
-      <h1>Our Services</h1>
-      <p>Everything you need to protect, manage, and grow your property investment — all under one roof.</p>
-    </div>
-  </section>
-
-  <!-- ===== MAIN SERVICES ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header centered">
-        <span class="section-tag">What We Offer</span>
-        <h2 class="section-title">Complete Property <span>Management Solutions</span></h2>
-        <div class="divider centered"></div>
-        <p class="section-subtitle">From leasing and tenant screening to maintenance and financial reporting, we handle it all.</p>
-      </div>
-
-      <!-- Service Detail Blocks -->
-      <div style="display:flex;flex-direction:column;gap:80px;margin-top:64px;">
-
-        <!-- Residential -->
-        <div class="why-grid">
-          <div>
-            <div style="font-size:48px;margin-bottom:20px;">🏠</div>
-            <span class="section-tag">Service 01</span>
-            <h2 class="section-title">Residential <span>Management</span></h2>
-            <div class="divider"></div>
-            <p style="color:var(--text-light);line-height:1.8;margin-bottom:24px;">Comprehensive management for single-family homes, condos, townhomes, and multi-unit residential buildings. We handle every aspect so you can enjoy passive income without the stress.</p>
-            <ul style="display:flex;flex-direction:column;gap:10px;">
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Full leasing and marketing</li>
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Tenant screening and placement</li>
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Rent collection and disbursement</li>
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Move-in / move-out inspections</li>
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Lease renewals and rent optimization</li>
-            </ul>
-            <a href="contact.html" class="btn btn-navy" style="margin-top:32px;">Get Started</a>
+    <!-- Service 01 -->
+    <div class="two-col align-center" style="margin-bottom:72px;">
+      <div>
+        <div class="service-card-num">Service 01</div>
+        <h2 class="section-title" style="font-size:28px;">Commercial Property<br/><em>Management</em></h2>
+        <div class="accent-bar"></div>
+        <p style="font-size:15px;color:var(--text-sec);line-height:1.8;margin-bottom:24px;">Day-to-day coordination for commercial properties, including tenant communication, maintenance coordination, vendor management, and operational follow-through. United Management Holdings LLC serves as the primary operational point of contact for the property.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-check"></div>
+            <div><h4>Day-to-Day Operations</h4><p>Ongoing coordination of property operations, maintenance requests, and routine management activities.</p></div>
           </div>
-          <div class="why-right">
-            <h3 style="color:var(--gold-light);font-size:18px;font-weight:700;margin-bottom:20px;">Why Owners Trust Us With Their Homes</h3>
-            <p style="color:rgba(255,255,255,0.7);font-size:14px;line-height:1.8;margin-bottom:20px;">Our residential management program is designed to maximize your rental income while minimizing vacancy periods. We market your property across all major platforms, qualify tenants rigorously, and maintain your asset at the highest standard.</p>
-            <div style="background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:24px;">
-              <div style="color:var(--gold-light);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">Average Results</div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-                <div><div style="font-size:28px;font-weight:800;color:var(--white);">14</div><div style="font-size:12px;color:rgba(255,255,255,0.5);">Days avg. to fill vacancy</div></div>
-                <div><div style="font-size:28px;font-weight:800;color:var(--white);">97%</div><div style="font-size:12px;color:rgba(255,255,255,0.5);">Occupancy rate</div></div>
-              </div>
-            </div>
+          <div class="feature-item">
+            <div class="feature-check"></div>
+            <div><h4>Primary Management Contact</h4><p>Single point of contact for tenants, vendors, and ownership on property operational matters.</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check"></div>
+            <div><h4>Operational Follow-Through</h4><p>All matters are tracked, documented, and followed through to resolution.</p></div>
           </div>
         </div>
+      </div>
+      <div class="callout-panel">
+        <h3>Scope Includes</h3>
+        <ul class="list">
+          <li>Tenant communication and correspondence</li>
+          <li>Maintenance request intake and coordination</li>
+          <li>Vendor scheduling and follow-up</li>
+          <li>Property access coordination</li>
+          <li>Operational documentation and record-keeping</li>
+          <li>Routine property inspections (as applicable)</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="divider-h" style="margin-bottom:72px;" />
 
-        <hr style="border:none;border-top:1px solid var(--light-gray);" />
+    <!-- Service 02 -->
+    <div class="two-col align-center" style="margin-bottom:72px;">
+      <div class="callout-panel">
+        <h3>Communication Areas</h3>
+        <ul class="list">
+          <li>General property inquiries and information</li>
+          <li>Maintenance request coordination</li>
+          <li>Insurance documentation and COI requests</li>
+          <li>Management notices and correspondence</li>
+          <li>Payment-related instructions (provided directly)</li>
+          <li>Lease-related communications (as applicable)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="service-card-num">Service 02</div>
+        <h2 class="section-title" style="font-size:28px;">Tenant <em>Communication</em></h2>
+        <div class="accent-bar"></div>
+        <p style="font-size:15px;color:var(--text-sec);line-height:1.8;margin-bottom:24px;">Centralized communication for tenants regarding property questions, maintenance requests, documentation, and management notices. All tenant communication is handled through United Management Holdings LLC to ensure consistency and documentation.</p>
+        <a href="contact.html" class="btn btn-outline-navy mt-16">Contact Management</a>
+        <a href="tenant-resources.html" class="btn btn-primary mt-16" style="margin-left:12px;">Tenant Resources</a>
+      </div>
+    </div>
+    <hr class="divider-h" style="margin-bottom:72px;" />
 
-        <!-- Commercial -->
-        <div class="why-grid">
-          <div class="why-right">
-            <h3 style="color:var(--gold-light);font-size:18px;font-weight:700;margin-bottom:20px;">Commercial Expertise</h3>
-            <p style="color:rgba(255,255,255,0.7);font-size:14px;line-height:1.8;margin-bottom:20px;">Managing commercial properties requires a different level of expertise. Our team understands CAM charges, NNN leases, commercial tenant relations, and the nuances of keeping business tenants happy and lease terms optimized.</p>
-            <ul style="display:flex;flex-direction:column;gap:12px;">
-              <li style="color:rgba(255,255,255,0.7);font-size:13px;display:flex;gap:10px;"><span style="color:var(--gold);">✓</span> Office buildings & retail centers</li>
-              <li style="color:rgba(255,255,255,0.7);font-size:13px;display:flex;gap:10px;"><span style="color:var(--gold);">✓</span> Industrial & warehouse facilities</li>
-              <li style="color:rgba(255,255,255,0.7);font-size:13px;display:flex;gap:10px;"><span style="color:var(--gold);">✓</span> Mixed-use developments</li>
-              <li style="color:rgba(255,255,255,0.7);font-size:13px;display:flex;gap:10px;"><span style="color:var(--gold);">✓</span> NNN & gross lease management</li>
-            </ul>
+    <!-- Service 03 -->
+    <div class="two-col align-center" style="margin-bottom:72px;">
+      <div>
+        <div class="service-card-num">Service 03</div>
+        <h2 class="section-title" style="font-size:28px;">Vendor &amp; Maintenance <em>Coordination</em></h2>
+        <div class="accent-bar"></div>
+        <p style="font-size:15px;color:var(--text-sec);line-height:1.8;margin-bottom:24px;">Coordination with approved vendors, contractors, and service providers to help keep property operations organized and responsive. United Management Holdings LLC manages vendor relationships on behalf of the property to ensure quality, accountability, and documentation.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-check"></div>
+            <div><h4>Approved Vendor Network</h4><p>Work with pre-approved, qualified contractors and service providers for property needs.</p></div>
           </div>
-          <div>
-            <div style="font-size:48px;margin-bottom:20px;">🏢</div>
-            <span class="section-tag">Service 02</span>
-            <h2 class="section-title">Commercial <span>Management</span></h2>
-            <div class="divider"></div>
-            <p style="color:var(--text-light);line-height:1.8;margin-bottom:24px;">Expert management of office buildings, retail spaces, industrial properties, and mixed-use developments. We maximize occupancy and protect the long-term value of your commercial asset.</p>
-            <ul style="display:flex;flex-direction:column;gap:10px;">
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Commercial tenant relations</li>
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> CAM reconciliations</li>
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Lease administration & renewals</li>
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Vendor & contractor management</li>
-              <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:15px;"><span style="color:var(--gold);font-weight:700;">✓</span> Capital improvement oversight</li>
-            </ul>
-            <a href="contact.html" class="btn btn-navy" style="margin-top:32px;">Get Started</a>
+          <div class="feature-item">
+            <div class="feature-check"></div>
+            <div><h4>Maintenance Request Tracking</h4><p>All maintenance requests are logged, coordinated, and followed up through to completion.</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check"></div>
+            <div><h4>Vendor Documentation</h4><p>Insurance, licensing, and scope confirmation maintained for all engaged service providers.</p></div>
           </div>
         </div>
-
+      </div>
+      <div class="callout-panel">
+        <h3>Coordination Includes</h3>
+        <ul class="list">
+          <li>HVAC, plumbing, electrical coordination</li>
+          <li>Landscaping and exterior maintenance</li>
+          <li>Janitorial and cleaning services</li>
+          <li>Security and access systems</li>
+          <li>General repairs and preventive maintenance</li>
+          <li>Emergency response coordination</li>
+        </ul>
       </div>
     </div>
-  </section>
+    <hr class="divider-h" style="margin-bottom:72px;" />
 
-  <!-- ===== ADDITIONAL SERVICES GRID ===== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header centered">
-        <span class="section-tag">Additional Services</span>
-        <h2 class="section-title">Everything <span>Included</span></h2>
-        <div class="divider centered"></div>
+    <!-- Services 04–07 compact grid -->
+    <div class="section-header">
+      <div class="section-eyebrow">Additional Services</div>
+      <h2 class="section-title">Full Operational <em>Support</em></h2>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-card-num">04</div>
+        <div class="icon-box icon-box-navy icon-box-50">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <h3>Rent &amp; CAM Coordination</h3>
+        <p>Support for rent collection coordination, CAM communication, operating expense tracking, and tenant payment workflows. Payment instructions are provided directly to tenants by management — not published on this website.</p>
+        <div class="service-card-footer">
+          <div class="service-card-tags"><span class="tag">CAM</span><span class="tag">Rent</span><span class="tag">OpEx</span></div>
+        </div>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">👥</div>
-          <h3>Tenant Placement</h3>
-          <p>Comprehensive screening including credit reports, criminal background checks, income verification, and landlord references. We find quality tenants fast.</p>
+      <div class="service-card reveal">
+        <div class="service-card-num">05</div>
+        <div class="icon-box icon-box-navy icon-box-50">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🔧</div>
-          <h3>Maintenance Coordination</h3>
-          <p>24/7 emergency response line. Our network of licensed, insured contractors handles repairs quickly and at competitive rates, with owner approval thresholds.</p>
+        <h3>Lease Administration Support</h3>
+        <p>Tracking key lease dates, tenant information, certificates of insurance, notices, and property documentation. Supports ownership in staying current with critical lease milestones and compliance requirements.</p>
+        <div class="service-card-footer">
+          <div class="service-card-tags"><span class="tag">Leases</span><span class="tag">COI</span><span class="tag">Notices</span></div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">💰</div>
-          <h3>Rent Collection</h3>
-          <p>Automated online rent collection with direct deposit to your account. Late fee enforcement and clear collection procedures ensure on-time payments.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-num">06</div>
+        <div class="icon-box icon-box-navy icon-box-50">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-        <div class="service-card">
-          <div class="service-icon">📊</div>
-          <h3>Financial Reporting</h3>
-          <p>Monthly income & expense statements, annual reports, and 1099 preparation. Complete financial visibility into every property you own.</p>
+        <h3>Owner Reporting &amp; Asset Operations</h3>
+        <p>Operational updates, expense tracking, property-level reporting, and support for ownership decision-making. Designed to give ownership a clear and current view of property operations.</p>
+        <div class="service-card-footer">
+          <div class="service-card-tags"><span class="tag">Reporting</span><span class="tag">Asset Ops</span></div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">⚖️</div>
-          <h3>Legal & Compliance</h3>
-          <p>Lease drafting, eviction management, security deposit handling, and full compliance with current local and state landlord-tenant laws.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-num">07</div>
+        <div class="icon-box icon-box-navy icon-box-50">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
         </div>
-        <div class="service-card">
-          <div class="service-icon">📸</div>
-          <h3>Property Marketing</h3>
-          <p>Professional photography, compelling listings, and syndication across Zillow, Trulia, Realtor.com, and 30+ additional platforms to minimize vacancy.</p>
+        <h3>Property Transition Support</h3>
+        <p>Support during ownership or management transitions, including tenant onboarding, vendor setup, contact updates, and document organization. Helps ensure continuity and minimize disruption during transition periods.</p>
+        <div class="service-card-footer">
+          <div class="service-card-tags"><span class="tag">Transitions</span><span class="tag">Onboarding</span></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== PRICING ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header centered">
-        <span class="section-tag">Transparent Pricing</span>
-        <h2 class="section-title">Simple, <span>Honest Fees</span></h2>
-        <div class="divider centered"></div>
-        <p class="section-subtitle">No hidden charges. No surprises. Just straightforward property management pricing.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;max-width:900px;margin:0 auto;">
-        <div style="border:2px solid var(--light-gray);border-radius:20px;padding:40px;text-align:center;transition:all 0.25s ease;" onmouseover="this.style.borderColor='var(--navy)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--light-gray)';this.style.transform='none'">
-          <div style="font-size:13px;font-weight:700;color:var(--text-light);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Starter</div>
-          <div style="font-size:48px;font-weight:800;color:var(--navy);line-height:1;">8<span style="font-size:24px;">%</span></div>
-          <div style="font-size:14px;color:var(--text-light);margin-bottom:24px;">of monthly rent</div>
-          <ul style="text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-            <li style="font-size:14px;color:var(--text-light);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Rent collection</li>
-            <li style="font-size:14px;color:var(--text-light);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Maintenance coordination</li>
-            <li style="font-size:14px;color:var(--text-light);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Monthly reporting</li>
-            <li style="font-size:14px;color:var(--text-light);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Online owner portal</li>
-          </ul>
-          <a href="contact.html" class="btn btn-navy" style="width:100%;display:block;">Get Started</a>
-        </div>
-        <div style="border:2px solid var(--navy);border-radius:20px;padding:40px;text-align:center;background:linear-gradient(135deg,var(--navy-dark),var(--navy));position:relative;">
-          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy-dark);font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;">Most Popular</div>
-          <div style="font-size:13px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Full Service</div>
-          <div style="font-size:48px;font-weight:800;color:var(--white);line-height:1;">10<span style="font-size:24px;">%</span></div>
-          <div style="font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:24px;">of monthly rent</div>
-          <ul style="text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-            <li style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Everything in Starter</li>
-            <li style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Tenant placement included</li>
-            <li style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Property marketing</li>
-            <li style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Legal compliance support</li>
-            <li style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:8px;"><span style="color:var(--gold);">✓</span> Annual property inspection</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary" style="width:100%;display:block;">Get Started</a>
-        </div>
-      </div>
-      <p style="text-align:center;color:var(--text-light);font-size:13px;margin-top:24px;">Custom pricing available for portfolios of 5+ properties. <a href="contact.html" style="color:var(--navy);font-weight:600;">Contact us</a> for a custom quote.</p>
+<section class="cta-banner">
+  <div class="container">
+    <h2>Questions About Our Services?</h2>
+    <p>Contact United Management Holdings LLC for information about property management, tenant coordination, or operational support.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-primary btn-lg">Contact Management</a>
+      <a href="tenant-resources.html" class="btn btn-ghost btn-lg">Tenant Resources</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== CTA BANNER ===== -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Let's Talk About Your Property</h2>
-      <p>Schedule a free, no-obligation consultation with our team today.</p>
-      <div class="cta-btns">
-        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
-        <a href="tel:+15551234567" class="btn btn-outline">Call (555) 123-4567</a>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="umh-logo">
+          <div class="umh-mark"><span>UMH</span></div>
+          <div class="umh-wordmark">
+            <span class="umh-name">United Management Holdings</span>
+            <span class="umh-sub">Commercial Property Management</span>
+          </div>
+        </a>
+        <p>Property management and operational coordination services for commercial real estate in Northern California.</p>
+        <p class="footer-related">Related United real estate operations include self-storage and RV storage businesses in the greater Sacramento / North Highlands area.</p>
       </div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="properties.html">Properties</a></li><li><a href="tenant-resources.html">Tenant Resources</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Property Management</a></li><li><a href="services.html">Tenant Coordination</a></li><li><a href="services.html">Vendor Coordination</a></li><li><a href="services.html">Lease Administration</a></li><li><a href="services.html">Owner Reporting</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:management@unitedmanagementholdings.com">management@unitedmanagementholdings.com</a></li><li><a href="contact.html">Send a Message</a></li><li><a href="tenant-resources.html">Tenant Resources</a></li></ul></div>
     </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="navbar-brand" style="display:inline-flex;">
-            <div class="navbar-logo-icon">UM</div>
-            <div class="navbar-brand-text">
-              <span class="navbar-brand-name">United Management</span>
-              <span class="navbar-brand-tagline">Property Management</span>
-            </div>
-          </a>
-          <p>Professional property management you can trust. Protecting and growing your investment since 2009.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html">Residential</a></li>
-            <li><a href="services.html">Commercial</a></li>
-            <li><a href="services.html">Tenant Placement</a></li>
-            <li><a href="services.html">Maintenance</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="tel:+15551234567">(555) 123-4567</a></li>
-            <li><a href="mailto:info@unitedmanagement.com">info@unitedmanagement.com</a></li>
-            <li><a href="contact.html">Get a Free Quote</a></li>
-          </ul>
-        </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-top">
+        <span class="footer-copy">© 2026 United Management Holdings LLC. All rights reserved.</span>
+        <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 United Management. All rights reserved.</span>
-        <span>
-          <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
-          <a href="#">Terms of Service</a>
-        </span>
-      </div>
+      <p class="footer-disclaimer">United Management Holdings LLC provides property management and operational coordination services. Nothing on this website constitutes legal, tax, investment, or financial advice.</p>
     </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+  </div>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
