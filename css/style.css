@@ -241,7 +241,7 @@ ul { list-style: none; }
 /* ===================== PAGE HEROES ===================== */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0D223A 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 52%, #EEF4FB 100%);
   display: flex;
   align-items: center;
   padding: 110px 0 80px;
@@ -253,10 +253,8 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 55% at 82% 18%, rgba(30,90,168,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 45% at 8% 85%, rgba(185,28,28,0.20) 0%, transparent 58%),
-    radial-gradient(ellipse 30% 30% at 50% 2%,  rgba(46,111,191,0.06) 0%, transparent 50%),
-    radial-gradient(ellipse 35% 28% at 72% 92%, rgba(185,28,28,0.08) 0%, transparent 55%);
+    radial-gradient(ellipse 45% 45% at 85% 15%, rgba(30,90,168,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 8% 85%, rgba(185,28,28,0.08) 0%, transparent 62%);
 }
 .hero-grid {
   position: relative; z-index: 1;
@@ -269,9 +267,9 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(30,90,168,0.18);
-  border: 1px solid rgba(30,90,168,0.35);
-  color: #90BAF0;
+  background: rgba(30,90,168,0.08);
+  border: 1px solid rgba(30,90,168,0.16);
+  color: var(--blue);
   padding: 5px 14px;
   border-radius: 100px;
   font-size: 12px;
@@ -283,24 +281,24 @@ ul { list-style: none; }
 .hero-eyebrow::before {
   content: '';
   width: 6px; height: 6px;
-  background: #90BAF0;
+  background: var(--blue);
   border-radius: 50%;
 }
 .hero h1 {
   font-size: clamp(32px, 4.5vw, 54px);
   font-weight: 800;
-  color: var(--white);
+  color: var(--navy);
   line-height: 1.10;
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
 .hero h1 em {
   font-style: normal;
-  color: #E4F0FB;
+  color: var(--blue);
 }
 .hero-desc {
   font-size: 17px;
-  color: rgba(255,255,255,0.72);
+  color: var(--text-sec);
   line-height: 1.75;
   max-width: 520px;
   margin-bottom: 36px;
@@ -309,27 +307,41 @@ ul { list-style: none; }
 .hero-divider {
   width: 100%;
   height: 1px;
-  background: rgba(255,255,255,0.10);
+  background: var(--border);
   margin: 40px 0 28px;
 }
 .hero-note {
   font-size: 13px;
-  color: rgba(255,255,255,0.45);
+  color: var(--text-light);
   line-height: 1.6;
   max-width: 460px;
+}
+.hero-note a {
+  color: var(--blue);
+}
+
+/* Hero ghost button override for light background */
+.hero .btn-ghost {
+  background: rgba(11,31,58,0.04);
+  border-color: rgba(11,31,58,0.22);
+  color: var(--navy);
+}
+.hero .btn-ghost:hover {
+  background: rgba(11,31,58,0.08);
+  border-color: rgba(11,31,58,0.35);
 }
 
 /* Hero info card */
 .hero-card {
-  background: rgba(12,31,54,0.62);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-top: 2px solid rgba(185,28,28,0.32);
+  background: rgba(11,31,58,0.96);
+  border: 1px solid rgba(11,31,58,0.18);
+  border-top: 3px solid rgba(185,28,28,0.55);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(11,31,58,0.18);
 }
 .hero-card-header {
-  background: rgba(30,90,168,0.10);
+  background: rgba(255,255,255,0.04);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 20px 28px;
 }
