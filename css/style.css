@@ -196,7 +196,7 @@ p,
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--red) 0%, var(--blue) 38%, rgba(30,90,168,0.18) 100%);
+  background: var(--red);
   z-index: 1;
 }
 .navbar.scrolled {
@@ -363,27 +363,27 @@ p,
 
 /* Hero info card */
 .hero-card {
-  background: rgba(11,31,58,0.96);
-  border: 1px solid rgba(11,31,58,0.18);
-  border-top: 3px solid rgba(185,28,28,0.55);
+  background: rgba(11,31,58,0.97);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-top: 3px solid rgba(185,28,28,0.72);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(11,31,58,0.18);
+  box-shadow: 0 8px 36px rgba(11,31,58,0.24);
 }
 .hero-card-header {
-  background: rgba(255,255,255,0.04);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
   padding: 20px 28px;
 }
 .hero-card-header h3 {
   font-size: 14px;
   font-weight: 700;
-  color: rgba(255,255,255,0.90);
+  color: rgba(255,255,255,0.95);
   letter-spacing: 0.3px;
 }
 .hero-card-header p {
   font-size: 12px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.52);
   margin-top: 2px;
 }
 .hero-card-body { padding: 8px 0; }
@@ -392,14 +392,15 @@ p,
   align-items: flex-start;
   gap: 14px;
   padding: 16px 28px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.09);
   transition: background var(--transition);
 }
 .hero-card-item:last-child { border-bottom: none; }
-.hero-card-item:hover { background: rgba(255,255,255,0.04); }
+.hero-card-item:hover { background: rgba(255,255,255,0.05); }
 .hci-icon {
   width: 36px; height: 36px;
-  background: rgba(30,90,168,0.20);
+  background: rgba(30,90,168,0.28);
+  color: rgba(255,255,255,0.90);
   border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
   font-size: 16px;
@@ -410,12 +411,12 @@ p,
   display: block;
   font-size: 13px;
   font-weight: 600;
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,0.95);
   margin-bottom: 2px;
 }
 .hci-text span {
   font-size: 12px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.58);
   line-height: 1.4;
 }
 
