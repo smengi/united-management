@@ -1,7 +1,7 @@
 /* ============================================================
    United Management Holdings LLC — Main Stylesheet
    Brand: UMH | Commercial Property Management & Asset Operations
-   Palette: Navy #0B1F3A | Blue #1E5AA8 | Red #B91C1C | #F8FAFC
+   Palette: Navy #0B1F3A | Blue #2F8FD3 | Red #D71920 | #F8FAFC
    ============================================================ */
 
 /* --- Reset & Variables --- */
@@ -10,10 +10,10 @@
 :root {
   --navy:        #0B1F3A;
   --navy-mid:    #152F56;
-  --blue:        #1E5AA8;
-  --blue-light:  #2E6FBF;
-  --red:         #B91C1C;
-  --red-light:   #DC2626;
+  --blue:        #2F8FD3;
+  --blue-light:  #35A9E6;
+  --red:         #D71920;
+  --red-light:   #EF2A2A;
   --bg:          #F8FAFC;
   --white:       #FFFFFF;
   --border:      #E2E8F0;
@@ -237,14 +237,19 @@ p,
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  padding: 6px;
+  padding: 8px 9px;
   border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.hamburger:hover {
+  background: rgba(255,255,255,0.14);
 }
 .hamburger span {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--white);
+  background: #FFFFFF;
   border-radius: 2px;
   transition: all var(--transition);
 }
@@ -399,8 +404,8 @@ p,
 .hero-card-item:hover { background: rgba(255,255,255,0.05); }
 .hci-icon {
   width: 36px; height: 36px;
-  background: rgba(30,90,168,0.28);
-  color: rgba(255,255,255,0.90);
+  background: rgba(47,143,211,0.32);
+  color: rgba(255,255,255,0.95);
   border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
   font-size: 16px;
