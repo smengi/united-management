@@ -30,7 +30,7 @@
   --max-width:   1160px;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 body {
   font-family: 'Inter', 'Segoe UI', -apple-system, Arial, sans-serif;
   color: var(--text);
@@ -38,10 +38,40 @@ body {
   line-height: 1.65;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 ul { list-style: none; }
+
+/* ---- Global overflow protection (individual rules below can override max-width) ---- */
+.container,
+.hero,
+.hero-grid,
+.quick-links-grid,
+.services-grid,
+.property-location-card,
+.form-card,
+.service-card,
+.quick-link-card,
+.notice-board,
+.callout-panel,
+.info-panel,
+.footer-grid {
+  max-width: 100%;
+}
+
+/* ---- Long text / email link wrapping ---- */
+a,
+p,
+.cib-value,
+.property-contact-bar a,
+.footer-col a,
+.hero-note,
+.form-note {
+  overflow-wrap: anywhere;
+}
 
 .container {
   max-width: var(--max-width);
@@ -738,10 +768,7 @@ ul { list-style: none; }
   font-size: 14px;
   line-height: 1.5;
 }
-@media (max-width: 600px) {
-  .form-row { grid-template-columns: 1fr; }
-  .form-card { padding: 28px 22px; }
-}
+/* 600px mobile rules consolidated at end of file */
 
 /* ===================== TENANT RESOURCE CARDS ===================== */
 .resource-grid {
@@ -1115,11 +1142,7 @@ a.quick-link-card[href*="notices"] .qlc-arrow {
 .pqa-btn-primary:hover { background: var(--blue-light); transform: translateY(-1px); }
 .pqa-btn-outline { background: transparent; border-color: var(--border); color: var(--navy); }
 .pqa-btn-outline:hover { border-color: var(--blue); color: var(--blue); }
-@media (max-width: 600px) {
-  .property-body { padding: 20px; }
-  .property-quick-actions { flex-direction: column; }
-  .pqa-btn { justify-content: center; }
-}
+/* 600px mobile rules consolidated at end of file */
 
 /* ===================== NOTICE BOARD ===================== */
 .notice-board {
@@ -1175,3 +1198,114 @@ a.quick-link-card[href*="notices"] .qlc-arrow {
   margin-top: 8px;
 }
 .footer-related a { color: rgba(255,255,255,0.35); }
+
+/* ===================== MOBILE RESPONSIVE (≤ 600px) ===================== */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .navbar .container {
+    height: 64px;
+  }
+
+  .site-logo-img {
+    height: 34px;
+    max-width: 190px;
+  }
+
+  .navbar .site-logo-img {
+    padding: 3px 6px;
+  }
+
+  .nav-links {
+    top: 64px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 92px 0 56px;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 10vw, 40px);
+    line-height: 1.08;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-links-grid,
+  .services-grid,
+  .property-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-body,
+  .form-card,
+  .service-card,
+  .callout-panel,
+  .info-panel,
+  .notice-board-body {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .form-card {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .property-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .property-contact-bar {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .property-quick-actions {
+    flex-direction: column;
+  }
+
+  .property-quick-actions .pqa-btn,
+  .pqa-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
