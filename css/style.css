@@ -106,6 +106,37 @@ ul { list-style: none; }
 .umh-logo.dark .umh-name { color: var(--navy); }
 .umh-logo.dark .umh-sub  { color: var(--text-light); }
 
+/* ===================== SITE LOGO (image) ===================== */
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.site-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+.site-logo-text { display: flex; flex-direction: column; }
+.site-logo-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.2px;
+  line-height: 1.15;
+}
+.site-logo-sub {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+.footer-site-logo .site-logo-img { height: 38px; }
+
 /* ===================== BUTTONS ===================== */
 .btn {
   display: inline-flex;
