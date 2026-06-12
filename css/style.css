@@ -1325,3 +1325,36 @@ a.quick-link-card[href*="notices"] .qlc-arrow {
     align-items: flex-start;
   }
 }
+
+/* ===================== LIVE PROPERTY PHOTO ===================== */
+/* Used when a real photo replaces the placeholder — full opacity, taller frame */
+.property-photo-area.photo-live { height: 300px; }
+.property-photo-area.photo-live img { opacity: 1; display: block; }
+.property-photo-area.photo-live.photo-tall { height: 400px; }
+@media (max-width: 640px) {
+  .property-photo-area.photo-live,
+  .property-photo-area.photo-live.photo-tall { height: 230px; }
+}
+
+/* ===================== NOTICE BOARD — ACTIVE NOTICE ===================== */
+.notice-item {
+  padding: 18px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+}
+.notice-item-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.notice-item .notice-tag {
+  padding: 4px 12px; background: rgba(30,90,168,0.10);
+  border: 1px solid rgba(30,90,168,0.25); border-radius: 100px;
+  font-size: 11px; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.6px;
+}
+.notice-item .notice-date { font-size: 12px; color: var(--text-light); font-weight: 500; }
+.notice-item h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.notice-item p { font-size: 13px; color: var(--text-sec); line-height: 1.7; margin: 0; }
+.notice-item p a { color: var(--blue); font-weight: 600; }

@@ -57,6 +57,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // --- Preselect inquiry/request type from ?type= links ---
+  // e.g. contact.html?type=maintenance, tenant-resources.html?type=payment
+  const typeParam = new URLSearchParams(window.location.search).get('type');
+  if (typeParam) {
+    const maps = {
+      inquiryType: { maintenance: 'tenant-maintenance', payment: 'tenant-payment', insurance: 'tenant-insurance', vendor: 'vendor-general', lease: 'tenant-lease', general: 'management-general' },
+      requestType: { maintenance: 'maintenance', payment: 'payment-verify', insurance: 'insurance', vendor: 'vendor-inquiry', lease: 'lease', general: 'tenant-general' }
+    };
+    ['inquiryType', 'requestType'].forEach(id => {
+      const sel = document.getElementById(id);
+      const val = maps[id] && maps[id][typeParam];
+      if (sel && val && sel.querySelector('option[value="' + val + '"]')) {
+        sel.value = val;
+      }
+    });
+    const formEl = document.getElementById('contactForm');
+    if (formEl) {
+      setTimeout(() => formEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
+    }
+  }
+
   // --- Contact form handler ---
   // If Formspree ID is still a placeholder, show email fallback instead of
   // pretending the form works. Replace YOUR_FORMSPREE_ID with your real ID
@@ -85,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.type = 'button';
         btn.addEventListener('click', () => {
           const name    = (form.querySelector('[name=firstName]')?.value || '') + ' ' + (form.querySelector('[name=lastName]')?.value || '');
-          const subject = encodeURIComponent('Website Inquiry — ' + (form.querySelector('[name=inquiryType,name=requestType]')?.value || 'General'));
+          const subject = encodeURIComponent('Website Inquiry — ' + (form.querySelector('[name=inquiryType], [name=requestType]')?.value || 'General'));
           const body    = encodeURIComponent((form.querySelector('[name=message]')?.value || '') + '\n\nFrom: ' + name.trim());
           window.location.href = 'mailto:management@unitedmanagementholdings.com?subject=' + subject + '&body=' + body;
         });
