@@ -141,4 +141,95 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // ============================================================
+  //   Portal flow (Tenant / Vendor): property select → action → form
+  //   No accounts, no fake login — pure client-side guidance over a
+  //   single Formspree form. Property selection is required first.
+  // ============================================================
+  const portal = document.getElementById('portal');
+  if (portal) {
+    const reveal       = document.getElementById('portalReveal');
+    const propBar      = document.getElementById('selectedPropertyBar');
+    const propBarName  = document.getElementById('selectedPropertyName');
+    const propField    = document.getElementById('propertyField');     // hidden input in the form
+    const subjectField = document.getElementById('formSubject');       // hidden _subject for Formspree
+    const reqSelect    = document.getElementById('requestType');       // visible request-type select
+    const formHeading  = document.getElementById('portalFormHeading'); // form title text
+    const portalType   = portal.getAttribute('data-portal') || 'Request';
+
+    function updateSubject() {
+      if (!subjectField) return;
+      const prop  = (propField && propField.value) ? propField.value : 'Property not selected';
+      const label = (reqSelect && reqSelect.options[reqSelect.selectedIndex])
+        ? reqSelect.options[reqSelect.selectedIndex].text : 'Request';
+      subjectField.value = 'UMH ' + portalType + ' Portal — ' + label + ' — ' + prop;
+    }
+
+    function toggleConditional(value) {
+      document.querySelectorAll('[data-cond]').forEach(function (el) {
+        const list = (el.getAttribute('data-cond') || '').split(/\s+/);
+        el.classList.toggle('show', list.indexOf(value) !== -1);
+      });
+    }
+
+    function selectProperty(name) {
+      document.querySelectorAll('.property-select-card[data-property]').forEach(function (c) {
+        c.classList.toggle('selected', c.getAttribute('data-property') === name);
+      });
+      if (propField)   propField.value = name;
+      if (propBarName) propBarName.textContent = name;
+      if (propBar)     propBar.classList.add('visible');
+      if (reveal)      reveal.classList.add('visible');
+      updateSubject();
+      const actions = document.getElementById('portalActions');
+      if (actions) setTimeout(function () { actions.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 120);
+    }
+
+    function chooseAction(value, label) {
+      if (reqSelect && value) {
+        const opt = reqSelect.querySelector('option[value="' + value + '"]');
+        if (opt) reqSelect.value = value;
+      }
+      document.querySelectorAll('.portal-action-card[data-action]').forEach(function (c) {
+        c.classList.toggle('selected', c.getAttribute('data-action') === value);
+      });
+      if (formHeading && label) formHeading.textContent = label;
+      toggleConditional(value);
+      updateSubject();
+      const formSec = document.getElementById('portalForm');
+      if (formSec) setTimeout(function () { formSec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 120);
+    }
+
+    document.querySelectorAll('.property-select-card[data-property]').forEach(function (card) {
+      card.addEventListener('click', function () { selectProperty(card.getAttribute('data-property')); });
+    });
+
+    const changeBtn = document.getElementById('changeProperty');
+    if (changeBtn) {
+      changeBtn.addEventListener('click', function () {
+        const sel = document.getElementById('portalSelect');
+        if (sel) sel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    document.querySelectorAll('.portal-action-card[data-action]').forEach(function (card) {
+      card.addEventListener('click', function () {
+        chooseAction(card.getAttribute('data-action'), card.getAttribute('data-label'));
+      });
+    });
+
+    if (reqSelect) {
+      reqSelect.addEventListener('change', function () { toggleConditional(reqSelect.value); updateSubject(); });
+    }
+
+    // Deep link: ?action=maintenance auto-selects the only property then the action.
+    const actionParam = new URLSearchParams(window.location.search).get('action');
+    if (actionParam) {
+      const single = document.querySelectorAll('.property-select-card[data-property]:not(.psc-disabled)');
+      if (single.length === 1) selectProperty(single[0].getAttribute('data-property'));
+      const ac = document.querySelector('.portal-action-card[data-action="' + actionParam + '"]');
+      if (ac) chooseAction(ac.getAttribute('data-action'), ac.getAttribute('data-label'));
+    }
+  }
+
 });

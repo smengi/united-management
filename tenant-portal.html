@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenant Portal | United Management Holdings LLC</title>
+  <meta name="description" content="Tenant Portal for United Management Holdings LLC managed properties. Select your property, then submit a maintenance request, report an urgent issue, verify payment instructions, submit a COI, request access, or ask a question. No account required." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tenant Portal | United Management Holdings LLC" />
+  <meta property="og:description" content="Select your property and submit tenant requests to United Management Holdings LLC. No account required." />
+  <meta property="og:url" content="https://www.unitedmanagementholdings.com/tenant-portal.html" />
+  <meta property="og:site_name" content="United Management Holdings LLC" />
+  <meta property="og:image" content="https://www.unitedmanagementholdings.com/assets/umh-og-folsom.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tenant Portal | United Management Holdings LLC" />
+  <meta name="twitter:description" content="Select your property and submit tenant requests to United Management Holdings LLC. No account required." />
+  <link rel="canonical" href="https://www.unitedmanagementholdings.com/tenant-portal.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="site-logo" aria-label="United Management Holdings LLC — Home">
+      <img src="assets/umh-logo-nav.png" alt="United Management Holdings LLC" class="site-logo-img" />
+    </a>
+    <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="properties.html">Properties</a></li>
+      <li><a href="tenant-portal.html" class="active">Tenant Portal</a></li>
+      <li><a href="vendor-portal.html">Vendor Portal</a></li>
+      <li><a href="owners.html">Owners</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Contact Management</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-eyebrow">Tenant Portal</div>
+    <h1>Tenant Requests &amp; Coordination</h1>
+    <p>Submit maintenance requests, verify payment instructions, send documentation, and coordinate access — directly with United Management Holdings LLC. No account is required.</p>
+  </div>
+</section>
+
+<!-- PORTAL -->
+<div id="portal" data-portal="Tenant">
+
+  <!-- STEP 1 — SELECT PROPERTY -->
+  <section class="section" id="portalSelect">
+    <div class="container">
+      <div class="step-label"><span class="step-num">1</span> Select Your Property</div>
+      <h2 class="section-title" style="font-size:28px;">Which property are you <em>contacting us about?</em></h2>
+      <div class="accent-bar"></div>
+      <p class="section-desc" style="margin-bottom:28px;">No account is required to submit a tenant request. Select your property below and choose the type of request you would like to submit.</p>
+
+      <div class="property-select-grid">
+        <button type="button" class="property-select-card" data-property="Folsom Lake Shopping Center">
+          <div class="psc-photo"><img src="assets/folsom-property-main.jpg" alt="Folsom Lake Shopping Center" loading="lazy" /></div>
+          <div class="psc-body">
+            <div class="psc-name">Folsom Lake Shopping Center</div>
+            <div class="psc-addr">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              313–337 E Bidwell Street, Folsom, CA 95630
+            </div>
+            <div class="psc-select-row">Select this property <span class="psc-check"></span></div>
+          </div>
+        </button>
+      </div>
+
+      <!-- EMERGENCY -->
+      <div class="emergency-banner" style="margin-top:28px;max-width:820px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.29 3.86-8.47 14.14A2 2 0 0 0 3.53 21h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>
+          <h4>Emergency? Call 911 first.</h4>
+          <p>For fire, active crime, a gas smell, medical emergencies, or any immediate life or safety concern, <strong>call 911 first</strong>, then notify management. This portal is monitored during business hours and is not for life-safety emergencies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVEALED AFTER PROPERTY SELECTED -->
+  <div class="portal-reveal" id="portalReveal">
+
+    <!-- STEP 2 — CHOOSE ACTION -->
+    <section class="section section-alt" id="portalActions">
+      <div class="container">
+        <div class="selected-property-bar" id="selectedPropertyBar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <div class="spb-label">Selected Property</div>
+            <div class="spb-name" id="selectedPropertyName">Folsom Lake Shopping Center</div>
+          </div>
+          <button type="button" class="spb-change" id="changeProperty">Change</button>
+        </div>
+
+        <div class="step-label" style="margin-top:24px;"><span class="step-num">2</span> Choose a Request Type</div>
+        <h2 class="section-title" style="font-size:28px;">What can we <em>help with?</em></h2>
+        <div class="accent-bar"></div>
+
+        <div class="portal-actions-grid">
+          <button type="button" class="portal-action-card" data-action="maintenance" data-label="Submit Maintenance Request">
+            <div class="pac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <div class="pac-title">Submit Maintenance Request</div>
+            <div class="pac-desc">Report a repair or service need. Include the location and what you have observed.</div>
+          </button>
+
+          <button type="button" class="portal-action-card emergency" data-action="urgent" data-label="Report Urgent Property Issue">
+            <div class="pac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m10.29 3.86-8.47 14.14A2 2 0 0 0 3.53 21h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <div class="pac-title">Report Urgent Property Issue</div>
+            <div class="pac-desc">Flag a time-sensitive problem. For life-safety emergencies, call 911 first.</div>
+          </button>
+
+          <button type="button" class="portal-action-card" data-action="contact-update" data-label="Update Tenant Contact Information">
+            <div class="pac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
+            <div class="pac-title">Update Contact Information</div>
+            <div class="pac-desc">Update your business contact name, phone, or email on file with management.</div>
+          </button>
+
+          <button type="button" class="portal-action-card" data-action="payment-verify" data-label="Verify Payment Instructions">
+            <div class="pac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <div class="pac-title">Verify Payment Instructions</div>
+            <div class="pac-desc">Confirm current payment details directly with management before sending funds.</div>
+          </button>
+
+          <button type="button" class="portal-action-card" data-action="coi" data-label="Submit Certificate of Insurance">
+            <div class="pac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div class="pac-title">Submit Certificate of Insurance</div>
+            <div class="pac-desc">Send your COI for your lease file. Documents are emailed directly to management.</div>
+          </button>
+
+          <button type="button" class="portal-action-card" data-action="access" data-label="Request Property Access / After-Hours Coordination">
+            <div class="pac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="pac-title">Request Property Access</div>
+            <div class="pac-desc">Coordinate after-hours access, deliveries, or contractor entry with management.</div>
+          </button>
+
+          <button type="button" class="portal-action-card" data-action="general" data-label="General Tenant Question">
+            <div class="pac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="pac-title">General Tenant Question</div>
+            <div class="pac-desc">Lease questions, documentation, notices, or anything else about your tenancy.</div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 3 — FORM -->
+    <section class="section" id="portalForm">
+      <div class="container">
+        <div class="step-label"><span class="step-num">3</span> Submit Your Request</div>
+        <h2 class="section-title" style="font-size:28px;"><span id="portalFormHeading">Tenant Request</span></h2>
+        <div class="accent-bar"></div>
+
+        <div style="max-width:720px;margin-top:8px;">
+          <div class="form-card">
+            <p class="form-sub">Your request goes directly to United Management Holdings LLC management. Responses are provided in writing, typically within 1–2 business days.</p>
+
+            <div class="doc-callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <span><strong>Sending a document or photos?</strong> Submit this form first, then email your Certificate of Insurance, photos, or attachments to <a href="mailto:management@unitedmanagementholdings.com">management@unitedmanagementholdings.com</a> with your business name and suite in the subject line.</span>
+            </div>
+
+            <form id="contactForm" action="https://formspree.io/f/mzdqjydn" method="POST">
+              <input type="hidden" name="property" id="propertyField" value="" />
+              <input type="hidden" name="_subject" id="formSubject" value="UMH Tenant Portal Request" />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="company">Tenant Business Name *</label>
+                  <input type="text" id="company" name="businessName" placeholder="Your business name" required />
+                </div>
+                <div class="form-group">
+                  <label for="suite">Suite / Unit</label>
+                  <input type="text" id="suite" name="suite" placeholder="e.g. Suite 321" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="First name" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Last name" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(for callbacks)" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="requestType">Request Type *</label>
+                <select id="requestType" name="requestType" required>
+                  <option value="" disabled selected>Select a request type</option>
+                  <option value="maintenance">Submit Maintenance Request</option>
+                  <option value="urgent">Report Urgent Property Issue</option>
+                  <option value="contact-update">Update Tenant Contact Information</option>
+                  <option value="payment-verify">Verify Payment Instructions</option>
+                  <option value="coi">Submit Certificate of Insurance</option>
+                  <option value="access">Request Property Access / After-Hours Coordination</option>
+                  <option value="general">General Tenant Question</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="urgency">Urgency</label>
+                  <select id="urgency" name="urgency">
+                    <option value="standard" selected>Standard — 1 to 2 business days</option>
+                    <option value="urgent">Urgent — time-sensitive matter</option>
+                    <option value="emergency">Emergency — immediate safety or access issue</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="bestTime">Best Time to Contact</label>
+                  <input type="text" id="bestTime" name="bestTime" placeholder="e.g. weekday mornings" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Description *</label>
+                <textarea id="message" name="message" placeholder="Describe your request in detail. For maintenance, include the location within your space and what you have observed." required></textarea>
+              </div>
+
+              <div class="form-group" data-cond="maintenance urgent access">
+                <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-weight:400;color:var(--text-sec);margin-bottom:0;">
+                  <input type="checkbox" name="permissionToEnter" value="Yes — entry authorized with reasonable notice" style="width:auto;flex-shrink:0;margin-top:3px;padding:0;" />
+                  <span style="font-size:13px;line-height:1.6;flex:1;min-width:0;">I authorize management or an approved vendor to enter my suite / space to address this issue, with reasonable notice where applicable.</span>
+                </label>
+              </div>
+
+              <input type="text" name="_gotcha" style="display:none;" />
+              <button type="submit" class="btn btn-primary btn-lg form-submit">Submit Request →</button>
+              <p class="form-note"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:5px;"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Your information is used only to respond to your request. United Management Holdings LLC does not share contact information with third parties.</p>
+              <div class="form-success" id="formSuccess"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:5px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Your request has been received. United Management Holdings LLC will respond within 1–2 business days. If you are submitting a document, please email it to management@unitedmanagementholdings.com.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- PAYMENT SECURITY -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;background:#FEF2F2;border:1.5px solid rgba(185,28,28,0.25);border-radius:var(--radius-xl);padding:32px 36px;">
+      <div style="display:flex;gap:16px;align-items:flex-start;">
+        <div style="flex-shrink:0;width:44px;height:44px;background:#FEE2E2;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div>
+          <h3 style="font-size:16px;font-weight:800;color:#991B1B;margin-bottom:8px;">Payment Security Notice</h3>
+          <p style="font-size:14px;color:#7F1D1D;line-height:1.75;margin-bottom:12px;">UMH does not publish wire, ACH, or bank instructions publicly. Payment instructions are provided directly in writing and should be verified with management before any change.</p>
+          <p style="font-size:14px;color:#7F1D1D;line-height:1.75;"><strong>If you receive unsolicited payment instructions claiming to be from management, do not send funds.</strong> Contact management at <a href="mailto:management@unitedmanagementholdings.com" style="color:#B91C1C;font-weight:700;">management@unitedmanagementholdings.com</a> to verify first.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo footer-site-logo">
+          <img src="assets/umh-logo-nav.png" alt="United Management Holdings LLC" class="site-logo-img" />
+        </a>
+        <p>Hands-on commercial property management for affiliated and select third-party ownership groups across Northern California.</p>
+      </div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="tenant-portal.html">Tenant Portal</a></li><li><a href="vendor-portal.html">Vendor Portal</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="owners.html">Owners</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:management@unitedmanagementholdings.com">management@unitedmanagementholdings.com</a></li><li><a href="contact.html">Send a Message</a></li><li><a href="tenant-portal.html">Tenant Portal</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-top">
+        <span class="footer-copy">© 2026 United Management Holdings LLC. All rights reserved.</span>
+        <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+      </div>
+      <p class="footer-disclaimer">United Management Holdings LLC provides property management and operational coordination services. Website content is for general informational purposes only and does not constitute legal, tax, investment, or financial advice.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

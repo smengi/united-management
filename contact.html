@@ -30,11 +30,13 @@
     <a href="index.html" class="site-logo" aria-label="United Management Holdings LLC — Home">
       <img src="assets/umh-logo-nav.png" alt="United Management Holdings LLC" class="site-logo-img" />
     </a>
-    <ul class="nav-links" id="navLinks">
+    <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
       <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
       <li><a href="properties.html">Properties</a></li>
-      <li><a href="tenant-resources.html">Tenant Resources</a></li>
+      <li><a href="tenant-portal.html">Tenant Portal</a></li>
+      <li><a href="vendor-portal.html">Vendor Portal</a></li>
+      <li><a href="owners.html">Owners</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
       <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Contact Management</a></li>
     </ul>
@@ -49,6 +51,19 @@
     <div class="page-hero-eyebrow">Get In Touch</div>
     <h1>Contact United Management Holdings</h1>
     <p>For tenant communication, vendor coordination, property operations, or general management inquiries, please contact United Management Holdings LLC.</p>
+  </div>
+</section>
+
+<!-- EMERGENCY BANNER -->
+<section style="background:var(--bg);padding:28px 0;border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="emergency-banner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.29 3.86-8.47 14.14A2 2 0 0 0 3.53 21h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <div>
+        <h4>Emergency? Call 911 first.</h4>
+        <p>For fire, active crime, a gas smell, medical emergencies, or any immediate life or safety concern, <strong>call 911 first</strong>, then notify management. This form is monitored during business hours and is not for life-safety emergencies.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -103,8 +118,8 @@
           </div>
           <div>
             <div class="cib-label">Who Should Contact Us</div>
-            <div class="cib-value">Tenants, Vendors &amp; Operational Inquiries</div>
-            <div class="cib-sub">Tenants, vendors, contractors, and operational contacts</div>
+            <div class="cib-value">Tenants, Vendors, Owners &amp; Leasing</div>
+            <div class="cib-sub">Tenants, vendors, contractors, property owners / investors, and leasing inquiries</div>
           </div>
         </div>
 
@@ -145,22 +160,32 @@
             <label for="inquiryType">Inquiry Type *</label>
             <select id="inquiryType" name="inquiryType" required>
               <option value="" disabled selected>Select inquiry type</option>
-              <optgroup label="Tenant Inquiries">
-                <option value="tenant-general">General Property Question</option>
-                <option value="tenant-maintenance">Maintenance Request</option>
-                <option value="tenant-insurance">Insurance Documentation (COI)</option>
-                <option value="tenant-payment">Payment Instructions</option>
-                <option value="tenant-lease">Lease / Documentation Question</option>
+              <optgroup label="Tenant">
+                <option value="tenant-general">Tenant — General Property Question</option>
+                <option value="tenant-maintenance">Tenant — Maintenance Request</option>
+                <option value="tenant-insurance">Tenant — Insurance Documentation (COI)</option>
+                <option value="tenant-payment">Tenant — Payment Instructions</option>
+                <option value="tenant-lease">Tenant — Lease / Documentation Question</option>
               </optgroup>
               <optgroup label="Vendor / Contractor">
                 <option value="vendor-general">Vendor / Contractor Inquiry</option>
-                <option value="vendor-coordination">Work Order / Coordination</option>
+                <option value="vendor-coordination">Vendor — Work Order / Coordination</option>
+              </optgroup>
+              <optgroup label="Property Owner / Investor">
+                <option value="owner-management">Property Owner / Investor — Management Inquiry</option>
+              </optgroup>
+              <optgroup label="Leasing">
+                <option value="leasing">Leasing / Space Availability</option>
+              </optgroup>
+              <optgroup label="Urgent">
+                <option value="emergency">Emergency / Urgent Property Issue</option>
               </optgroup>
               <optgroup label="General">
                 <option value="management-general">General Management Inquiry</option>
                 <option value="other">Other</option>
               </optgroup>
             </select>
+            <p style="font-size:12px;color:var(--text-light);margin-top:8px;line-height:1.5;">For fire, active crime, a gas smell, medical emergencies, or any immediate life or safety concern, call <strong>911 first</strong>, then notify management. Tenants and vendors can also use the <a href="tenant-portal.html" style="color:var(--blue);font-weight:600;">Tenant Portal</a> or <a href="vendor-portal.html" style="color:var(--blue);font-weight:600;">Vendor Portal</a>.</p>
           </div>
           <div class="form-group">
             <label for="message">Message *</label>
@@ -188,7 +213,7 @@
     <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
       <details style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;">
         <summary style="font-weight:700;color:var(--navy);font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;">I am a tenant — how do I submit a maintenance request? <span style="color:var(--blue);font-weight:400;font-size:18px;">+</span></summary>
-        <p style="color:var(--text-sec);font-size:14px;margin-top:14px;line-height:1.7;">Submit maintenance requests by emailing <a href="mailto:management@unitedmanagementholdings.com" style="color:var(--blue);">management@unitedmanagementholdings.com</a> or by using the Tenant Message Form on the <a href="tenant-resources.html" style="color:var(--blue);">Tenant Resources</a> page. Please include a description of the issue, its location within the property, and the urgency level.</p>
+        <p style="color:var(--text-sec);font-size:14px;margin-top:14px;line-height:1.7;">Submit maintenance requests through the <a href="tenant-portal.html?action=maintenance" style="color:var(--blue);">Tenant Portal</a> (select your property, then choose Submit Maintenance Request) or by emailing <a href="mailto:management@unitedmanagementholdings.com" style="color:var(--blue);">management@unitedmanagementholdings.com</a>. Please include a description of the issue, its location within the property, and the urgency level.</p>
       </details>
       <details style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;">
         <summary style="font-weight:700;color:var(--navy);font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;">Where do I send my rent payment? <span style="color:var(--blue);font-weight:400;font-size:18px;">+</span></summary>
@@ -222,9 +247,9 @@
           <img src="assets/umh-logo-nav.png" alt="United Management Holdings LLC" class="site-logo-img" />
         </a>
         <p>Property management and operational coordination services for commercial real estate in Northern California.</p>      </div>
-      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="properties.html">Properties</a></li><li><a href="tenant-resources.html">Tenant Resources</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Property Management</a></li><li><a href="services.html">Tenant Coordination</a></li><li><a href="services.html">Vendor Coordination</a></li><li><a href="services.html">Lease Administration</a></li><li><a href="services.html">Owner Reporting</a></li></ul></div>
-      <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:management@unitedmanagementholdings.com">management@unitedmanagementholdings.com</a></li><li><a href="contact.html">Send a Message</a></li><li><a href="tenant-resources.html">Tenant Resources</a></li></ul></div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="tenant-portal.html">Tenant Portal</a></li><li><a href="vendor-portal.html">Vendor Portal</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="owners.html">Owners</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:management@unitedmanagementholdings.com">management@unitedmanagementholdings.com</a></li><li><a href="contact.html">Send a Message</a></li><li><a href="tenant-portal.html">Tenant Portal</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <div class="footer-bottom-top">

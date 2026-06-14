@@ -1358,3 +1358,193 @@ a.quick-link-card[href*="notices"] .qlc-arrow {
 .notice-item h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .notice-item p { font-size: 13px; color: var(--text-sec); line-height: 1.7; margin: 0; }
 .notice-item p a { color: var(--blue); font-weight: 600; }
+
+/* ===================== PORTAL FLOW (Tenant / Vendor) ===================== */
+
+/* Step label */
+.step-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.step-label .step-num {
+  width: 24px; height: 24px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Property selection cards */
+.property-select-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+.property-select-card {
+  text-align: left;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.property-select-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+.property-select-card.selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(47,143,211,0.16), var(--shadow);
+}
+.psc-photo {
+  height: 140px;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.psc-photo img { width: 100%; height: 100%; object-fit: cover; }
+.psc-body { padding: 18px 20px; }
+.psc-name { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.psc-addr { font-size: 13px; color: var(--text-sec); line-height: 1.5; display: flex; align-items: flex-start; gap: 6px; }
+.psc-addr svg { width: 14px; height: 14px; color: var(--blue); flex-shrink: 0; margin-top: 2px; }
+.psc-select-row {
+  margin-top: 14px; padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 13px; font-weight: 700; color: var(--blue);
+}
+.psc-select-row .psc-check {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 2px solid var(--border);
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: all var(--transition);
+}
+.property-select-card.selected .psc-check {
+  background: var(--blue); border-color: var(--blue); color: var(--white);
+}
+.property-select-card.selected .psc-check::after { content: '✓'; font-size: 12px; font-weight: 800; }
+.psc-disabled {
+  opacity: 0.65; cursor: default; pointer-events: none;
+}
+.psc-soon {
+  display:inline-block; font-size: 11px; font-weight: 700; color: var(--text-light);
+  background: var(--bg); border: 1px solid var(--border);
+  padding: 3px 10px; border-radius: 100px; letter-spacing: 0.4px;
+}
+
+/* Selected property chip */
+.selected-property-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  background: rgba(47,143,211,0.06);
+  border: 1px solid rgba(47,143,211,0.22);
+  border-radius: var(--radius);
+  padding: 13px 18px;
+  margin-bottom: 8px;
+}
+.selected-property-bar.visible { display: flex; }
+.selected-property-bar svg { width: 17px; height: 17px; color: var(--blue); flex-shrink: 0; }
+.selected-property-bar .spb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-light); }
+.selected-property-bar .spb-name { font-size: 14px; font-weight: 700; color: var(--navy); }
+.selected-property-bar .spb-change {
+  margin-left: auto; font-size: 12px; font-weight: 600; color: var(--blue);
+  background: none; border: none; cursor: pointer; font-family: inherit; text-decoration: underline;
+}
+
+/* Portal reveal wrapper */
+.portal-reveal { display: none; }
+.portal-reveal.visible { display: block; }
+
+/* Portal action cards */
+.portal-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.portal-action-card {
+  text-align: left;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.portal-action-card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 4px 18px rgba(47,143,211,0.12);
+  transform: translateY(-2px);
+}
+.portal-action-card.selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(47,143,211,0.16);
+}
+.pac-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  color: rgba(255,255,255,0.92);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px;
+}
+.pac-icon svg { width: 20px; height: 20px; }
+.portal-action-card.emergency .pac-icon { background: linear-gradient(135deg, var(--red), var(--red-light)); }
+.pac-title { font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+.pac-desc { font-size: 13px; color: var(--text-sec); line-height: 1.6; }
+
+/* Emergency banner */
+.emergency-banner {
+  background: #FEF2F2;
+  border: 1.5px solid rgba(185,28,28,0.28);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.emergency-banner svg { width: 20px; height: 20px; color: var(--red); flex-shrink: 0; margin-top: 2px; }
+.emergency-banner h4 { font-size: 14px; font-weight: 800; color: #991B1B; margin-bottom: 4px; }
+.emergency-banner p { font-size: 13px; color: #7F1D1D; line-height: 1.65; margin: 0; }
+.emergency-banner p a { color: #B91C1C; font-weight: 700; }
+
+/* Document email callout (upload alternative for phase 1) */
+.doc-callout {
+  background: rgba(47,143,211,0.05);
+  border: 1px dashed rgba(47,143,211,0.35);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text-sec);
+  line-height: 1.6;
+  display: flex; gap: 11px; align-items: flex-start;
+  margin-bottom: 18px;
+}
+.doc-callout svg { width: 17px; height: 17px; color: var(--blue); flex-shrink: 0; margin-top: 1px; }
+.doc-callout a { color: var(--blue); font-weight: 600; }
+
+/* Conditional form field groups (hidden until relevant action) */
+[data-cond] { display: none; }
+[data-cond].show { display: block; }
