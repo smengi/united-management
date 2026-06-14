@@ -1,5 +1,5 @@
 // ============================================================
-//   United Management Holdings LLC — Main JS
+//   United Management Holdings LLC - Main JS
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -106,14 +106,14 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.type = 'button';
         btn.addEventListener('click', () => {
           const name    = (form.querySelector('[name=firstName]')?.value || '') + ' ' + (form.querySelector('[name=lastName]')?.value || '');
-          const subject = encodeURIComponent('Website Inquiry — ' + (form.querySelector('[name=inquiryType], [name=requestType]')?.value || 'General'));
+          const subject = encodeURIComponent('Website Inquiry: ' + (form.querySelector('[name=inquiryType], [name=requestType]')?.value || 'General'));
           const body    = encodeURIComponent((form.querySelector('[name=message]')?.value || '') + '\n\nFrom: ' + name.trim());
           window.location.href = 'mailto:management@unitedmanagementholdings.com?subject=' + subject + '&body=' + body;
         });
       }
 
     } else {
-      // Real Formspree endpoint — use fetch submission
+      // Real Formspree endpoint - use fetch submission
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = form.querySelector('.form-submit');
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ============================================================
   //   Portal flow (Tenant / Vendor): property select → action → form
-  //   No accounts, no fake login — pure client-side guidance over a
+  //   No accounts, no fake login. Pure client-side guidance over a
   //   single Formspree form. Property selection is required first.
   // ============================================================
   const portal = document.getElementById('portal');
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const prop  = (propField && propField.value) ? propField.value : 'Property not selected';
       const label = (reqSelect && reqSelect.options[reqSelect.selectedIndex])
         ? reqSelect.options[reqSelect.selectedIndex].text : 'Request';
-      subjectField.value = 'UMH ' + portalType + ' Portal — ' + label + ' — ' + prop;
+      subjectField.value = 'UMH ' + portalType + ' Portal: ' + label + ' (' + prop + ')';
     }
 
     function toggleConditional(value) {
