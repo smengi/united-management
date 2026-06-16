@@ -886,6 +886,8 @@ p,
 .footer-col ul a {
   font-size: 13px;
   color: rgba(255,255,255,0.62);
+  overflow-wrap: anywhere;
+  word-break: break-word;
   transition: color var(--transition);
 }
 .footer-col ul a:hover { color: var(--white); }
@@ -1137,7 +1139,8 @@ a.quick-link-card[href*="notices"] .qlc-arrow {
 }
 .property-contact-bar svg { width: 17px; height: 17px; color: var(--blue); flex-shrink: 0; }
 .property-contact-bar .pcb-label { font-size: 12px; color: var(--text-sec); }
-.property-contact-bar a { color: var(--navy); font-weight: 600; font-size: 14px; }
+.property-contact-bar a { color: var(--navy); font-weight: 600; font-size: 14px; overflow-wrap: anywhere; word-break: break-word; }
+.property-contact-bar > div { min-width: 0; }
 .property-quick-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .pqa-btn {
   display: inline-flex; align-items: center; gap: 7px;
