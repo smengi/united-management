@@ -212,14 +212,15 @@ p,
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
 }
 .nav-links a {
   color: rgba(255,255,255,0.78);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
-  padding: 7px 14px;
+  padding: 7px 11px;
   border-radius: 6px;
+  white-space: nowrap;
   transition: all var(--transition);
 }
 .nav-links a:hover {
@@ -231,7 +232,7 @@ p,
   background: rgba(255,255,255,0.05);
   box-shadow: inset 0 -2px 0 rgba(255,255,255,0.38);
 }
-.nav-cta { margin-left: 12px; }
+.nav-cta { margin-left: 8px; }
 .hamburger {
   display: none;
   flex-direction: column;
@@ -254,7 +255,7 @@ p,
   transition: all var(--transition);
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1024px) {
   .hamburger { display: flex; }
   .nav-links {
     display: none;
@@ -1543,7 +1544,32 @@ a.quick-link-card[href*="notices"] .qlc-arrow {
   margin-bottom: 18px;
 }
 .doc-callout svg { width: 17px; height: 17px; color: var(--blue); flex-shrink: 0; margin-top: 1px; }
-.doc-callout a { color: var(--blue); font-weight: 600; }
+.doc-callout a { color: var(--blue); font-weight: 600; word-break: break-word; }
+
+/* Management contact notice */
+.mgmt-notice {
+  background: rgba(11,31,58,0.035);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  max-width: 880px;
+}
+.mgmt-notice svg { width: 18px; height: 18px; color: var(--navy); flex-shrink: 0; margin-top: 2px; }
+.mgmt-notice p { font-size: 13.5px; color: var(--text-sec); line-height: 1.65; margin: 0; min-width: 0; }
+.mgmt-notice a { color: var(--blue); font-weight: 600; word-break: break-word; }
+.mgmt-notice.center { margin-left: auto; margin-right: auto; }
+
+/* Collapsible helper note (e.g. what to include in a request) */
+.help-note { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; margin-bottom: 18px; }
+.help-note summary { font-size: 13.5px; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.help-note summary::-webkit-details-marker { display: none; }
+.help-note summary::after { content: "+"; color: var(--blue); font-weight: 400; font-size: 18px; line-height: 1; flex-shrink: 0; }
+.help-note[open] summary::after { content: "\2212"; }
+.help-note p { font-size: 13px; color: var(--text-sec); line-height: 1.65; margin: 10px 0 0; }
 
 /* Conditional form field groups (hidden until relevant action) */
 [data-cond] { display: none; }

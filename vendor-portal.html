@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vendor Portal | United Management Holdings LLC</title>
-  <meta name="description" content="Vendor Portal for United Management Holdings LLC managed properties. Select the property where work is being performed, then submit an invoice, upload your W-9 or COI, request site access, confirm scope of work, or reach emergency vendor contact. No account required." />
+  <meta name="description" content="Vendor Portal for United Management Holdings LLC managed properties. Select the property where work is being performed, then submit an invoice, upload your W-9 or COI, request site access, confirm scope of work, or flag an urgent property issue. No account required." />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Vendor Portal | United Management Holdings LLC" />
@@ -66,6 +66,11 @@
       <div class="accent-bar"></div>
       <p class="section-desc" style="margin-bottom:28px;">No account is required to submit vendor documents or requests. Select the property below and choose the type of request you would like to submit.</p>
 
+      <div class="mgmt-notice" style="margin-bottom:28px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <p><strong>Management contact:</strong> United Management Holdings LLC is the management contact for Folsom Lake Shopping Center. Tenants, vendors, and contractors should direct maintenance, documentation, payment verification, access, and general property matters to <a href="mailto:management@unitedmanagementholdings.com">management@unitedmanagementholdings.com</a>.</p>
+      </div>
+
       <div class="property-select-grid">
         <button type="button" class="property-select-card" data-property="Folsom Lake Shopping Center">
           <div class="psc-photo"><img src="assets/folsom-property-main.jpg" alt="Folsom Lake Shopping Center" loading="lazy" /></div>
@@ -90,7 +95,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.29 3.86-8.47 14.14A2 2 0 0 0 3.53 21h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         <div>
           <h4>Emergency? Call 911 first.</h4>
-          <p>For fire, active crime, a gas smell, medical emergencies, or any immediate life or safety concern, <strong>call 911 first</strong>, then notify management. This portal is monitored during business hours and is not for life-safety emergencies.</p>
+          <p>For fire, active crime, a gas smell, medical emergencies, or any immediate life or safety concern, <strong>call 911 first</strong>, then notify management. Website forms are reviewed during business hours and are not for life-safety emergencies.</p>
         </div>
       </div>
     </div>
@@ -146,10 +151,10 @@
             <div class="pac-desc">Submit or confirm a written scope before work begins. Attach proposals by email.</div>
           </button>
 
-          <button type="button" class="portal-action-card emergency" data-action="emergency" data-label="Emergency Vendor Contact">
+          <button type="button" class="portal-action-card emergency" data-action="emergency" data-label="Urgent Property Issue">
             <div class="pac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m10.29 3.86-8.47 14.14A2 2 0 0 0 3.53 21h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <div class="pac-title">Emergency Vendor Contact</div>
-            <div class="pac-desc">Flag an urgent property issue you have observed on site. Life-safety? Call 911 first.</div>
+            <div class="pac-title">Urgent Property Issue</div>
+            <div class="pac-desc">Flag an urgent property issue you have observed on site. Not for life-safety emergencies, call 911 first.</div>
           </button>
 
           <button type="button" class="portal-action-card" data-action="general" data-label="General Vendor Question">
@@ -217,7 +222,7 @@
                   <option value="coi">Submit Certificate of Insurance</option>
                   <option value="access">Request Site Access</option>
                   <option value="scope">Confirm Scope of Work</option>
-                  <option value="emergency">Emergency Vendor Contact</option>
+                  <option value="emergency">Urgent Property Issue</option>
                   <option value="general">General Vendor Question</option>
                 </select>
               </div>
@@ -256,7 +261,7 @@
                   <select id="urgency" name="urgency">
                     <option value="standard" selected>Standard: 1 to 2 business days</option>
                     <option value="urgent">Urgent: time-sensitive matter</option>
-                    <option value="emergency">Emergency / life-safety concern (call 911 first)</option>
+                    <option value="emergency">Life-safety emergency? Call 911 first</option>
                   </select>
                 </div>
               </div>
