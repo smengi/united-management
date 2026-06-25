@@ -1577,3 +1577,100 @@ a.quick-link-card[href*="notices"] .qlc-arrow {
 /* Conditional form field groups (hidden until relevant action) */
 [data-cond] { display: none; }
 [data-cond].show { display: block; }
+
+/* ============================================================
+   TENANT PORTAL: SIGN IN GATEWAY
+   ============================================================ */
+.portal-signin { padding-top: 70px; }
+.signin-split { display: grid; grid-template-columns: 1.05fr 0.95fr; min-height: calc(100vh - 70px); }
+.signin-aside {
+  background: linear-gradient(160deg, #0B1F3A 0%, #152F56 100%);
+  color: #fff; padding: 64px 56px; display: flex; flex-direction: column;
+}
+.signin-logo { background:#fff; border-radius:10px; padding:7px 12px; display:inline-flex; width:max-content; box-shadow:0 2px 10px rgba(0,0,0,0.18); }
+.signin-logo img { height: 40px; display:block; }
+.signin-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.16); color:#fff; font-size:12px; font-weight:700; letter-spacing:0.6px; text-transform:uppercase; padding:7px 14px; border-radius:100px; width:max-content; margin-top:40px; }
+.signin-badge .dot { width:7px; height:7px; border-radius:50%; background: var(--red); }
+.signin-aside h1 { font-size: 40px; line-height:1.12; font-weight:800; margin: 20px 0 18px; }
+.signin-aside h1 em { color: var(--blue-light); font-style: normal; }
+.signin-aside .lead { font-size:15px; color: rgba(255,255,255,0.80); line-height:1.7; max-width: 470px; }
+.signin-features { display:flex; flex-direction:column; gap:14px; margin-top: 30px; }
+.signin-feature { display:flex; align-items:center; gap:14px; }
+.signin-feature .sf-icon { width:42px; height:42px; border-radius:10px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.14); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.signin-feature .sf-icon svg { width:19px; height:19px; color: var(--blue-light); }
+.signin-feature span { font-size:14.5px; font-weight:600; color: rgba(255,255,255,0.92); }
+.signin-secnote { margin-top:auto; padding-top: 28px; border-top:1px solid rgba(255,255,255,0.1); font-size:12.5px; color: rgba(255,255,255,0.62); line-height:1.6; }
+.signin-secnote a { color: rgba(255,255,255,0.85); font-weight:600; word-break:break-word; }
+.signin-main { background: var(--white); padding: 64px 56px; display:flex; align-items:center; justify-content:center; }
+.signin-card { width:100%; max-width: 440px; }
+.signin-card h2 { font-size:28px; font-weight:800; color: var(--navy); }
+.signin-card .signin-sub { font-size:14px; color: var(--text-sec); margin-top:6px; }
+.signin-field { margin-top: 18px; }
+.signin-field label { display:block; font-size:13px; font-weight:700; color: var(--navy); margin-bottom:7px; }
+.signin-field input { width:100%; padding:13px 15px; border:1px solid var(--border); border-radius: var(--radius); font-size:15px; font-family:inherit; background: var(--bg); color: var(--text); }
+.signin-field input:focus { outline:none; border-color: var(--blue); background:#fff; box-shadow:0 0 0 3px rgba(47,143,211,0.15); }
+.signin-fieldrow { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+.signin-fieldrow a { font-size:13px; color: var(--blue); font-weight:600; white-space:nowrap; }
+.signin-btn { width:100%; margin-top:22px; justify-content:center; }
+.signin-note { margin-top:16px; background: rgba(47,143,211,0.06); border:1px solid rgba(47,143,211,0.18); border-radius: var(--radius); padding:14px 16px; font-size:13px; color: var(--text-sec); line-height:1.6; }
+.signin-note strong { color: var(--navy); }
+.signin-note a { color: var(--blue); font-weight:700; word-break:break-word; }
+.signin-divider { margin:22px 0; border:none; border-top:1px solid var(--border); }
+.signin-foot { text-align:center; font-size:14px; color: var(--text-sec); }
+.signin-foot a { color: var(--blue); font-weight:700; word-break:break-word; }
+@media (max-width: 600px) { .portal-signin { padding-top: 64px; } }
+@media (max-width: 900px) {
+  .signin-split { grid-template-columns: 1fr; min-height:0; }
+  .signin-aside { padding: 40px 24px; }
+  .signin-aside h1 { font-size: 30px; }
+  .signin-main { padding: 36px 24px; }
+}
+
+/* ============================================================
+   TENANT DASHBOARD (preview)
+   ============================================================ */
+.sample-banner { background:#FEF6E7; border:1px solid #F5D9A0; border-left:4px solid #D9920A; border-radius: var(--radius-lg); padding:14px 18px; display:flex; gap:12px; align-items:flex-start; max-width:880px; }
+.sample-banner svg { width:18px; height:18px; color:#B8730A; flex-shrink:0; margin-top:1px; }
+.sample-banner p { font-size:13.5px; color:#7A5206; line-height:1.6; margin:0; min-width:0; }
+.sample-banner strong { color:#5C3E04; }
+
+.dash-summary { display:flex; flex-wrap:wrap; gap:14px 32px; align-items:center; background: var(--white); border:1px solid var(--border); border-radius: var(--radius-lg); padding:20px 24px; }
+.dash-summary .ds-item { min-width:0; }
+.dash-summary .ds-label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.7px; color: var(--text-light); }
+.dash-summary .ds-value { font-size:15px; font-weight:700; color: var(--navy); margin-top:2px; overflow-wrap:anywhere; }
+
+.dash-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.dash-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:18px; }
+.dash-card { background: var(--white); border:1px solid var(--border); border-radius: var(--radius-lg); padding:22px; display:flex; flex-direction:column; }
+.dash-card .dc-head { display:flex; align-items:center; gap:11px; margin-bottom:12px; }
+.dash-card .dc-icon { width:38px; height:38px; border-radius:9px; background: rgba(47,143,211,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.dash-card .dc-icon svg { width:19px; height:19px; color: var(--blue); }
+.dash-card h3 { font-size:15px; font-weight:800; color: var(--navy); }
+.dash-card p { font-size:13.5px; color: var(--text-sec); line-height:1.6; }
+.dash-card .dc-status { font-size:13px; font-weight:600; color: var(--text-sec); margin-top:10px; }
+.dash-card .dc-meta { margin-top:auto; padding-top:14px; }
+.dash-card a.dc-link { font-size:13.5px; font-weight:700; color: var(--blue); display:inline-flex; align-items:center; gap:5px; word-break:break-word; }
+
+/* status badges */
+.badge { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; padding:4px 10px; border-radius:100px; white-space:nowrap; }
+.badge::before { content:""; width:6px; height:6px; border-radius:50%; background: currentColor; flex-shrink:0; }
+.badge-submitted { background: rgba(47,143,211,0.12); color:#1E5AA8; }
+.badge-progress { background: rgba(217,146,10,0.16); color:#8A5F05; }
+.badge-waiting { background: rgba(107,114,128,0.16); color:#3F4754; }
+.badge-complete { background: rgba(16,185,129,0.16); color:#06694A; }
+
+/* responsive ticket table */
+table.ticket-table { width:100%; border-collapse:collapse; background:var(--white); border:1px solid var(--border); border-radius: var(--radius-lg); overflow:hidden; }
+table.ticket-table th { text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color: var(--text-light); font-weight:700; padding:14px 16px; background: var(--bg); border-bottom:1px solid var(--border); }
+table.ticket-table td { font-size:13.5px; color: var(--text); padding:14px 16px; border-bottom:1px solid var(--border); vertical-align:top; }
+table.ticket-table tr:last-child td { border-bottom:none; }
+table.ticket-table .t-num { font-weight:700; color: var(--navy); }
+@media (max-width: 760px) {
+  table.ticket-table, table.ticket-table thead, table.ticket-table tbody, table.ticket-table th, table.ticket-table td, table.ticket-table tr { display:block; }
+  table.ticket-table { border:none; background:transparent; }
+  table.ticket-table thead { position:absolute; left:-9999px; top:-9999px; }
+  table.ticket-table tr { background:var(--white); border:1px solid var(--border); border-radius: var(--radius-lg); padding:14px 16px; margin-bottom:14px; }
+  table.ticket-table td { border:none; padding:6px 0; display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
+  table.ticket-table td::before { content: attr(data-label); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; color: var(--text-light); font-weight:700; flex-shrink:0; }
+  table.ticket-table td > * { text-align:right; margin-left:auto; }
+}

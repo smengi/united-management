@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tenant Portal | United Management Holdings LLC</title>
-  <meta name="description" content="Tenant Portal for United Management Holdings LLC managed properties. Select your property, then submit a maintenance request, report an urgent issue, verify payment instructions, submit a COI, request access, or ask a question. No account required." />
+  <meta name="description" content="Tenant Portal for Folsom Lake Shopping Center, managed by United Management Holdings LLC. Sign in to submit and track maintenance requests, verify payment instructions, and access documents. You can also submit a request without an account." />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Tenant Portal | United Management Holdings LLC" />
-  <meta property="og:description" content="Select your property and submit tenant requests to United Management Holdings LLC. No account required." />
+  <meta property="og:description" content="Tenant Portal for Folsom Lake Shopping Center. Sign in for maintenance, payments, and documents, or submit a request without an account." />
   <meta property="og:url" content="https://www.unitedmanagementholdings.com/tenant-portal.html" />
   <meta property="og:site_name" content="United Management Holdings LLC" />
   <meta property="og:image" content="https://www.unitedmanagementholdings.com/assets/umh-og-folsom.jpg" />
@@ -47,11 +47,110 @@
   </div>
 </nav>
 
-<section class="page-hero">
+<!-- TENANT SIGN IN GATEWAY -->
+<section class="portal-signin">
+  <div class="signin-split">
+    <div class="signin-aside">
+      <a href="index.html" class="signin-logo" aria-label="United Management Holdings LLC, Home">
+        <img src="assets/umh-logo-nav.png" alt="United Management Holdings LLC" />
+      </a>
+      <span class="signin-badge"><span class="dot"></span> Secure Tenant Access</span>
+      <h1>Your property,<br>handled in <em>one place.</em></h1>
+      <p class="lead">Sign in to submit and track maintenance requests, verify payment instructions, set up ACH through an approved process, and access lease documents for Folsom Lake Shopping Center.</p>
+      <div class="signin-features">
+        <div class="signin-feature">
+          <span class="sf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <span>Submit and track maintenance requests</span>
+        </div>
+        <div class="signin-feature">
+          <span class="sf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span>Verify payment instructions and ACH setup</span>
+        </div>
+        <div class="signin-feature">
+          <span class="sf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+          <span>Lease documents and statements on request</span>
+        </div>
+      </div>
+      <p class="signin-secnote">United Management Holdings LLC never publishes payment or banking instructions by email. Verify all payment details inside the portal or directly with management at <a href="mailto:management@unitedmanagementholdings.com">management@unitedmanagementholdings.com</a>.</p>
+    </div>
+    <div class="signin-main">
+      <div class="signin-card">
+        <h2>Tenant Sign In</h2>
+        <p class="signin-sub">Folsom Lake Shopping Center &middot; Tenant Portal</p>
+        <form id="signinForm" onsubmit="return false;" novalidate>
+          <div class="signin-field">
+            <label for="signinEmail">Email address</label>
+            <input type="email" id="signinEmail" name="email" placeholder="you@yourbusiness.com" autocomplete="email" />
+          </div>
+          <div class="signin-field">
+            <div class="signin-fieldrow">
+              <label for="signinPassword">Password</label>
+              <a href="contact.html">Forgot password?</a>
+            </div>
+            <input type="password" id="signinPassword" name="password" placeholder="Your password" autocomplete="off" />
+          </div>
+          <button type="submit" id="signinBtn" class="btn btn-primary btn-lg signin-btn">Sign In to Portal</button>
+        </form>
+        <div class="signin-note" id="signinNote">
+          <strong>Portal accounts are being set up.</strong> Online sign-in for Folsom Lake Shopping Center tenants is not active yet. To request access, or for anything you need right now, contact management at <a href="mailto:management@unitedmanagementholdings.com">management@unitedmanagementholdings.com</a>.
+        </div>
+        <hr class="signin-divider" />
+        <p class="signin-foot">See what is inside: <a href="tenant-dashboard.html">preview the tenant dashboard</a> (sample data). You can also <a href="#request">submit a request without an account</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section">
   <div class="container">
-    <div class="page-hero-eyebrow">Tenant Portal</div>
-    <h1>Tenant Requests &amp; Coordination</h1>
-    <p>Submit maintenance requests, verify payment instructions, send documentation, and coordinate access, directly with United Management Holdings LLC. No account is required.</p>
+    <div class="section-header">
+      <div class="section-eyebrow">Inside the Portal</div>
+      <h2 class="section-title">What tenants can <em>do here</em></h2>
+      <div class="accent-bar"></div>
+      <p class="section-desc">Once your account is set up, the Tenant Portal keeps everything for your suite in one place. You can preview the dashboard below.</p>
+    </div>
+    <div class="dash-grid">
+      <div class="dash-card">
+        <div class="dc-head"><div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Maintenance Requests</h3></div>
+        <p>Submit a repair or service request for your suite or a common area, with photos and access details.</p>
+      </div>
+      <div class="dash-card">
+        <div class="dc-head"><div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Ticket Status</h3></div>
+        <p>Follow each request from submitted, to vendor assigned, to scheduled, to completed.</p>
+      </div>
+      <div class="dash-card">
+        <div class="dc-head"><div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div><h3>Payments &amp; ACH</h3></div>
+        <p>Verify payment instructions and request ACH setup through an approved secure process. No banking details are published here.</p>
+      </div>
+      <div class="dash-card">
+        <div class="dc-head"><div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Documents &amp; COI</h3></div>
+        <p>Access lease documents and statements, and submit your Certificate of Insurance.</p>
+      </div>
+      <div class="dash-card">
+        <div class="dc-head"><div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div><h3>Contact Information</h3></div>
+        <p>Keep your billing, maintenance, and insurance contacts current so management reaches the right person.</p>
+      </div>
+      <div class="dash-card">
+        <div class="dc-head"><div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><h3>Notices from Management</h3></div>
+        <p>Read property notices, safety reminders, and payment-verification reminders in one place.</p>
+      </div>
+    </div>
+    <div class="text-center mt-48">
+      <a href="tenant-dashboard.html" class="btn btn-primary">Preview the Tenant Dashboard</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER INTO NO-ACCOUNT REQUEST FLOW -->
+<section class="section section-alt" id="request" style="padding-bottom:0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">No Account Needed</div>
+      <h2 class="section-title">Submit a request <em>right now</em></h2>
+      <div class="accent-bar"></div>
+      <p class="section-desc">You do not need a portal account to reach management. Select your property, choose a request type, and submit. Your request goes directly to United Management Holdings LLC.</p>
+    </div>
   </div>
 </section>
 
@@ -64,7 +163,7 @@
       <div class="step-label"><span class="step-num">1</span> Select Your Property</div>
       <h2 class="section-title" style="font-size:28px;">Which property are you <em>contacting us about?</em></h2>
       <div class="accent-bar"></div>
-      <p class="section-desc" style="margin-bottom:28px;">No account is required to submit a tenant request. Select your property below and choose the type of request you would like to submit.</p>
+      <p class="section-desc" style="margin-bottom:28px;">Select your property below, then choose the type of request you would like to submit.</p>
 
       <div class="mgmt-notice" style="margin-bottom:28px;">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -339,5 +438,18 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script>
+  (function () {
+    var f = document.getElementById('signinForm'), n = document.getElementById('signinNote');
+    if (f && n) {
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        n.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        n.style.boxShadow = '0 0 0 3px rgba(47,143,211,0.28)';
+        setTimeout(function () { n.style.boxShadow = ''; }, 1400);
+      });
+    }
+  })();
+</script>
 </body>
 </html>
